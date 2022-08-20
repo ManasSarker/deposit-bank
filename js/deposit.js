@@ -1,22 +1,11 @@
 document.getElementById("btn-deposit").addEventListener("click", function () {
-  /* Get any input value by calling function */
-  const inputDepositAmount = getInputFieldValueById("deposit-field");
+  const previousDepositValue = getTextElementById("deposit-total");
 
-  /* Get previous deposit total by Id */
+  console.log("deposit total", previousDepositValue);
 
-  const previousDepositTotalAmount = getFieldValueById("deposit-total");
+  const inputDepositValue = getInputElementById("input-deposit-field");
 
-  const newDepositTotal = inputDepositAmount + previousDepositTotalAmount;
+  const newDepositValue = previousDepositValue + inputDepositValue;
 
-  setTextElementValueById("deposit-total", newDepositTotal);
-
-  /*  Get previous Balance  */
-
-  const previousBalanceTotal = getFieldValueById("balance-total");
-
-  /*  sum two amount to Balance field */
-
-  const newBalanceTotal = inputDepositAmount + previousBalanceTotal;
-
-  setTextElementValueById("balance-total", newBalanceTotal);
+  setValueById("deposit-total", newDepositValue);
 });

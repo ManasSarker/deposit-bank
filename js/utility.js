@@ -1,27 +1,29 @@
-function getInputFieldValueById(inputFieldId) {
-  const inputField = document.getElementById(inputFieldId);
+function getTextElementById(textId) {
+  const textElement = document.getElementById(textId);
 
-  const inputFieldValueString = inputField.value;
+  const textValueString = textElement.innerText;
 
-  const inputFieldValue = parseFloat(inputFieldValueString);
+  const totalTextValue = parseFloat(textValueString);
 
-  inputField.value = "";
+  console.log("From utility", totalTextValue);
 
-  return inputFieldValue;
+  return totalTextValue;
 }
 
-function getFieldValueById(fieldId) {
-  const field = document.getElementById(fieldId);
+function getInputElementById(inputId) {
+  const inputElement = document.getElementById(inputId);
 
-  const fieldValueString = field.innerText;
+  const inputValueString = inputElement.value;
 
-  const fieldValue = parseFloat(fieldValueString);
+  const totalInputValue = parseFloat(inputValueString);
 
-  return fieldValue;
+  inputElement.value = "";
+
+  return totalInputValue;
 }
 
-function setTextElementValueById(elementId, newValue) {
-  const textElement = document.getElementById(elementId);
+function setValueById(inputId, newValue) {
+  const inputElement = document.getElementById(inputId);
 
-  textElement.innerText = newValue;
+  inputElement.innerText = newValue;
 }
